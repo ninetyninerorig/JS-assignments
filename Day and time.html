@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            h1{
+                font-family: SF Pro Text;
+                font-size: 150px;
+                text-align: center;}
+            body{
+                font-family:sf pro text;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Day and time are as follows:</h1>
+        <script type="text/javascript">
+            //Day
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            var n = weekday[d.getDay()];
+            document.write('Today is : '+n+'.');
+
+            //Time
+            var h=d.getHours();
+            var m=d.getMinutes();
+            var s=d.getSeconds();
+            h = (h >= 12)? h - 12: h;
+            var suf;
+            if(h===0){
+                suf='AM';
+            } 
+            else{
+                suf='PM'
+            }
+            document.write('<br>');
+            document.write('Current time is : '+h+suf+':'+m+':'+s);
+        </script>
+    </body>
+</html>

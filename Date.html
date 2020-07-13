@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body{
+            text-align: center;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 175px;
+            margin-top: 220px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var date = function(sp){
+        today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1;
+        var yyyy = today.getFullYear();
+        if(dd<10) dd='0'+dd;
+        if(mm<10) mm='0'+mm;
+        return (dd+sp+mm+sp+yyyy);
+        }
+        document.write(date('/'));
+        </script>
+    </body>
+</html>
