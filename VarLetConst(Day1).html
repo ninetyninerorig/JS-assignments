@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Difference between Var,Let and Const</h1>
+        <p>Var is mainly used to introduce new variables into a code. They are applicable throughout the code
+            but cannot be used in any blocks within a code.</p>
+        <script>
+            var a=14;
+            console.log(a); //displays value of a
+        </script>
+        <p>Let is to reuse any variable again in any block of code which is present within the main code.</p>
+        <script>
+            let a=14; //a variable
+            {
+                let a=15; //same variable, different value
+                console.log(a);
+            }console.log(a);
+        </script>
+        <p>Const is used to define a variable whose value stays fixed throughout the code and cannot be changed</p>
+        <script>
+            const a=14;
+            const a=11;//gives error
+        </script>
+    </body>
+</html>
