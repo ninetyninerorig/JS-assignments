@@ -1,0 +1,18 @@
+Dynamic datatype:Javascript has ability to convery a datatype into any any other form.
+		 ex.:a variable can be treated as number or string.
+
+String:Consists of a series of characters and are defined using single or double quotes.
+		ex.:a="hello",b='hi'.
+
+Numbers: Variables can be assigned with numerical value which may be normal or float value.
+		ex.:a=10,b=10.5.
+
+Boolean:Gives true or false as output based on conditions given.
+		ex.:a==5,b==4,console.log(a==b) will give false.
+
+Array:More like a list that are defined like sting values.
+		ex.:a=['a','b'],a[0] will give a.
+
+typeof:can be used to type of value present in variable.
+		ex.:a=1,typeof(a) will give number.
+
