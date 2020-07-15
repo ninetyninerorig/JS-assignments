@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Question2(Day2)</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        //STRING METHODS
+        //slice: to extracts a part of a string and returns the extracted part in a new string.
+        var device='mobile,laptop,desktop';
+        var part=device.slice(-14,-8);
+        console.log(part);
+
+        //substring: same functionality of string but cannot use negative index
+        var device='mobile,laptop,desktop';
+        var part=device.slice(7,13);
+        console.log(part);
+
+        //replace: to replace a specified value with another value in a string.
+        var device='mobile,laptop,desktop';
+        var rep=device.replace('desktop','tablet');
+        console.log(rep);
+
+        //replaceAll: Basically replaces all instances of an element with another element specified.
+        //(I didnt know how to give an example so just wrote what it does).
+
+        //concat: To add two or more strings.
+        str1='a';
+        str2='b';
+        str3=str1.concat(str2);
+        console.log(str3);
+
+        //trim: to remove additional whitespaces.
+        str='hey hi   '
+        sm=str.trim();
+        console.log(sm);
+    </script>
+</body>
+</html>
