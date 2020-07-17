@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Question3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        //Using conditional statements
+        var marks=prompt('Enter your marks:');
+        if(marks>=50 && marks<60){
+            console.log('Marks are '+marks+' and grade is B');
+        }
+        if(marks>=60 && marks<70){
+            console.log('Marks are '+marks+' and grade is B+');
+        }
+        if(marks>=70 && marks<80){
+            console.log('Marks are '+marks+' and grade is A');
+        }
+        if(marks>=80 && marks<90){
+            console.log('Marks are '+marks+' and grade is A+');
+        }
+        if(marks>=90 && marks<=100){
+            console.log('Marks are '+marks+' and grade is O');
+        }
+        else{
+            console.log('Sorry buddy better luck next time!')
+        }
+
+        //Using ternary
+        var marks=prompt('Enter your marks:');
+        let res=(marks>=50 && marks<60)?'Marks are '+marks+' and grade is B':(marks>=60 && marks<70)?'Marks are '+marks+' and grade is B+':
+                (marks>=70 && marks<80)?'Marks are '+marks+' and grade is A':(marks>=80 && marks<90)?'Marks are '+marks+' and grade is A+':
+                (marks>=90 && marks<=100)?'Marks are '+marks+' and grade is O':'Sorry buddy better luck next time!';
+        console.log(res);
+        
+    </script>
+</body>
+</html>
