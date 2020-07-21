@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Question2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        class User {
+        constructor(name, age,email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.coins = 0;
+        this.courses=[];}
+        login(){
+        console.log(`${this.name} has logged in`);
+        return this;
+        }
+        logout(){
+        console.log(`${this.name} has logged out`);
+        return this;
+        }
+        }
+        class Moderator extends User{
+        constructor(name,age,email){
+        super(name,age,email);
+        }
+        addCoins(User){
+        this.coins++;
+        console.log(`${User.name} has ${this.coins} coins added`);
+        return this;
+        }
+        removeCoins(User){
+        this.coins--;
+        console.log(`${User.name} has 1 coin removed and has ${this.coins} coins`);
+        return this;
+        }
+        }
+        class Admin extends Moderator{
+        addCourse(user,course){
+        user.courses.push(course);
+        console.log(`${course} has been added for ${user.name}`);
+        }
+        removeCourse(user,course){
+        user.courses.pop(course);
+        console.log(`${course} has been removed for ${user.name}`);
+        }
+        }
+        let user1=new User('C',21,'c@gmail.com')
+        let user2=new User('D',22,'d@gmai.com')
+        let mod=new Moderator('B',23,'b@gmail.com');
+        let admin=new Admin('A',24,'a@gmail.com');
+        let users=[user1,user2,mod,admin];
+
+        users.forEach(element => {
+        console.log(element);
+        })
+    </script>
+</body>
+</html>
