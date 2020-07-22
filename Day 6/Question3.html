@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Question3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 id='title'>Hey,</h1>
+    <h3 id='time'></h3>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        var name=prompt('Enter name');
+        title.innerText +=` welcome  here ${name}!`;
+        const cloc=document.getElementById('time');
+        function clock(){
+            let date=new Date();
+            let time=date.toLocaleTimeString();
+            cloc.innerText=time;
+            }setInterval(clock,1000);
+         classList.toggle('body');   
+    </script>
+</body>
+</html>

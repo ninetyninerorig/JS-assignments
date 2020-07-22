@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Question1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <style>
+    body {
+    transition: background .5s;
+    }
+    </style>
+    <script>
+    var colors = ['violet','blue','lightblue','lightgreen'];
+    var active = 0;
+    setInterval(function(){
+    document.querySelector('body').style.background = colors[active];
+    active++;
+    if (active == colors.length) active = 0;
+    }, 5000);
+    </script>
+</body>
+</html>
