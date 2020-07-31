@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mini Project</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h2>To-do list</h2>
+    <form action="" id="tForm">
+        <input type="text" id="todo">
+        <button type="button" id="b1">Add Task</button>
+        <button type="button" id="b2">Remove Task</button>
+        <button type="button" id="b3">Save</button>
+    </form>
+    <ul id="list">
+    </ul>
+    <script>
+        const button1 = document.querySelector('#b1');
+        const button2 = document.querySelector('#b2');
+        const button3 = document.querySelector('#b3');
+        var lst = document.querySelector('#list');
+        var item,text,newItem;
+
+        button1.onclick=function(){
+            item = document.querySelector("#todo").value;
+            lst = document.getElementsByTagName('ul')[0];
+            newItem = document.createElement('li');
+            text = document.createTextNode(item);
+            newItem.appendChild(text);
+            lst.appendChild(newItem);
+        }
+        button2.onclick=function(){
+            lst = document.getElementsByTagName('ul')[0];
+            removeMe = document.getElementsByTagName('li')[0];
+            lst.removeChild(removeMe);
+        }
+        button3.onclick=function(){
+            el = document.querySelector('#list').innerText;
+            localStorage.setItem('save',el);
+            console.log(localStorage);
+        }
+    </script>
+</body>
+</html>
